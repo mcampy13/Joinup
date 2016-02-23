@@ -15,52 +15,61 @@
     <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/subCategory.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse sidebar" role="navigation">
+    <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+			<ul class="nav navbar-nav" id="sidebarSidebar">
+				<li><a href="/dashboard"><span id="icon" class="pull-right glyphicon glyphicon-home"></span>    Dashboard<span class="sr-only">(current)</span></a></li>
+                <li><a href="/gameHome"><span id="icon" class="pull-right glyphicon glyphicon-tower"></span>    Game Home</a></li>
+                <li><a href="/users"><span id="icon" class="pull-right glyphicon glyphicon-user"></span>    Users</a></li>
+                <li><a href="/badges"><span id="icon" class="pull-right glyphicon glyphicon-certificate"></span>    Badges</a></li>
+                <li><a href="/addCategory"><span id="icon" class="pull-right glyphicon glyphicon-plus"></span>    Categories</a></li>
+                <li class="active"><a href="/addSubCategory"><span id="icon" class="pull-right glyphicon glyphicon-plus"></span>    Sub-Categories</a></li>
+                <li><a href="/addQuestion"><span id="icon" class="pull-right glyphicon glyphicon-plus"></span>    Questions</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+			<a class="navbar-brand" href="/dashboard">Connect Hub </a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1" aria-expanded="false" aria-controls="bs-sidebar-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/dashboard">Connect Hub</a>
+            
         </div>
-
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a id="profileName" href="/profile"><span class="glyphicon glyphicon-user"></span></a></li>
+        <div id="navbar" class="navbar-collapse collapse">
+            
+             <ul class="nav navbar-nav navbar-right" id="topBar">
+                <li><a id="profileName" href="/profile"><span class="glyphicon glyphicon-user"></span>    </a></li>
+				<li><a href="/settings"><span class="glyphicon glyphicon-cog"></span>    </a></li>
                 <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>  Logout</a></li>
             </ul>
-            <form class="navbar-form navbar-right" method="get">
+            <form class="navbar-form navbar-right">
                 <input type="text" class="form-control" placeholder="Search...">
             </form>
         </div>
+        
     </div>
-</div> <!-- .navbar .navbar-inverse .navbar-fixed-top -->
+</nav>
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li><a href="/dashboard"><span class="glyphicon glyphicon-dashboard"></span>    Dashboard</a></li>
-                <li><a href="/gameHome"><span class="glyphicon glyphicon-tower"></span>    Game Home</a></li>
-                <li><a href="/users"><span class="glyphicon glyphicon-user"></span>    Users</a></li>
-                <li><a href="/badges"><span class="glyphicon glyphicon-certificate"></span>    Badges</a></li>
-                <li><a href="/addCategory"><span class="glyphicon glyphicon-plus"></span>    Categories</a></li>
-                <li class="active"><a href="/addSubCategory"><span class="glyphicon glyphicon-plus"></span>    Sub-Categories</a></li>
-                <li><a href="/addQuestion"><span class="glyphicon glyphicon-plus"></span>    Questions</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="/settings"><span class="glyphicon glyphicon-cog"></span>    Settings</a></li>
-            </ul>
-        </div>
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header">Sub-Categories</h1>
