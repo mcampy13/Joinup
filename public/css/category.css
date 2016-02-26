@@ -1,12 +1,27 @@
 
+.mobileTop>li{
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px; 
+
+}
+
 
 /*
  * Table Content
  */
 
 .table-responsive {
-    display: block;
-    margin: auto;
+    display: inline;
+    text-align:center;
+     left:50%;
+     transform: translate(-8%);
+}
+
+@media(min-width:1330px){
+    .table-responsive{
+        transform: translate(-15%);
+    }
 }
 
 table {

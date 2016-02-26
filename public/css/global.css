@@ -9,6 +9,17 @@ body {
     background-color: #f7f7f7;
 }
 
+.mobileTop{
+    text-align:center;
+}
+
+.mobileTop>li{
+    color:#262626 !important;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:5px;
+}
+
 
 /*
  * Global add-ons
@@ -34,7 +45,7 @@ body {
 }
 
 .main{
-    margin-top:10px;
+    margin-top:20px;
 }
 
 /*Remove rounded coners, creates space between top bar and sidebar*/
@@ -226,6 +237,15 @@ section{
     -moz-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
     box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
     
+}
+
+#searchIcon{
+    color:#f7f7f7;
+    margin-right:10px;
+}
+
+#icon{
+    font-size: 19px;
 }
 
 /*Scale Icons to look like zoom on hover*/
