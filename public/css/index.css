@@ -10,6 +10,7 @@ body div.logo-div {
     position: relative;
 }
 
+
 body h1 {
     font-size: 50px;
     text-align:center;
@@ -31,6 +32,11 @@ a {
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
+    border-radius: 7px;
+    -webkit-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
+    -o-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
+    box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {

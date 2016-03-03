@@ -1,4 +1,15 @@
 
+#dashBoardView{
+    left:50%;
+    transform: translate(-50%);
+}
+
+/*small/medium side display*/
+@media (min-width: 1430px) {
+    #dashBoardView{
+        transform:translate(-45%);
+    }
+}
 
 .show-grid {
     margin: 15px 0;

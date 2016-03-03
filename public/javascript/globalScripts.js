@@ -4,6 +4,8 @@
  */
 $(document).ready(function(){
     
+    console.log('globalScripts.js loaded');
+    
     /*pushes down mobile navbar*/
     $('#dropDown').click(function(){
 			var Value=$('#topNav').height();
@@ -11,13 +13,17 @@ $(document).ready(function(){
             console.log('click pushed');
 	});
     
-    /*Close extended colapsed navbar menu when user clicks outside of the menu*/
-       $(document).ready(function () {
-         $(document).click(function(event) {
-           $("#bs-sidebar-navbar-collapse-2").collapse('hide');
-         });
-       });
     
+     /*Close extended colapsed navbar menu when user clicks outside of the menu*/
+     jQuery('body').bind('click', function(e) {
+        if(jQuery(e.target).closest('.navbar').length == 0) {
+            // click happened outside of .navbar, so hide
+            var opened = jQuery("#bs-sidebar-navbar-collapse-2").hasClass('collapse in');
+            if ( opened === true ) {
+                jQuery('#bs-sidebar-navbar-collapse-2').collapse('hide');
+            }
+        }
+    });
     
     
 });

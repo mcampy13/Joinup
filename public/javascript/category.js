@@ -9,7 +9,8 @@ $(document).ready(function(){
     var Question = Parse.Object.extend('Question');
 
     var profileButton = document.getElementById("profileName");
-    profileButton.innerHTML += " "
+    profileButton.innerHTML += " ";
+    //profileButton.innerHTML += "Username";
     profileButton.innerHTML += Parse.User.current().get("username");
 
     queryCategories();

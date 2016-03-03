@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     var profileButton = document.getElementById("profileName");
     profileButton.innerHTML += " "
-    profileButton.innerHTML += Parse.User.current().get("username");
+    //profileButton.innerHTML += Parse.User.current().get("username");
 
     var allUsers = [];
 

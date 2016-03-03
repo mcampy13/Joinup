@@ -7,14 +7,19 @@
 body {
    /* padding-top: 50px;*/
     background-color: #f7f7f7;
+    width:100vw;
+    height:100%;
 }
 
 .mobileTop{
     text-align:center;
 }
 
+
 .mobileTop>li{
-    color:#262626 !important;
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px; 
     margin-left:20px;
     margin-right:20px;
     margin-bottom:5px;
@@ -58,10 +63,10 @@ nav.sidebar.navbar {
 
 
 nav.sidebar, .main{
-    -webkit-transition: margin 200ms ease-out;
-    -moz-transition: margin 200ms ease-out;
-    -o-transition: margin 200ms ease-out;
-    transition: margin 200ms ease-out;
+    -webkit-transition: margin-right 200ms ease-out;
+    -moz-transition: margin-right 200ms ease-out;
+    -o-transition: margin-right 200ms ease-out;
+    transition: margin-right 200ms ease-out;
     position:fixed;
 }
 
@@ -115,6 +120,7 @@ nav.sidebar, .main{
     nav.sidebar .navbar-nav > li{
         border-bottom: 2px #262626 solid;
     }
+    
 
     /* Colors/style dropdown box*/
     nav.sidebar .navbar-nav .open .dropdown-menu {
@@ -168,7 +174,7 @@ nav.sidebar, .main{
 
 /* .....NavBar: Fully showing nav bar..... */
 
-@media (min-width: 1330px) {
+@media (min-width: 1430px) {
 
     /*Allow main to be next to Nav*/
     .main{
@@ -202,6 +208,7 @@ section{
 #sidebarSidebar{
     -webkit-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
+    -o-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
     box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
 }
     
@@ -235,6 +242,7 @@ section{
     border: 2px #262626 solid;
     -webkit-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
+    -o-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
     box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
     
 }
@@ -321,52 +329,4 @@ section{
 .main .control-label {
     color: black;
 }
-
-
-/*
- * Table Content
- */
-
-.table-responsive {
-    display: block;
-    margin: auto;
-}
-
-table {
-    display: table;
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-    border-collapse: separate;
-}
-
-table th {
-    color: white;
-    background-color: #f4801f;
-    text-align: center;
-}
-
-
-table th#deleteHead {
-    color: white;
-    background-color: red;
-}
-
-table .table-button {
-    display: block;
-    margin: auto;
-    width: 65px;
-    height: 25px;
-}
-
-table button:hover {
-    background-color: #f4801f;
-    color: white;
-}
-
-table button.deleteButton:hover {
-    color: white;
-    background-color: red;
-}
-
 

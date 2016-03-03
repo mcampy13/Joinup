@@ -12,28 +12,6 @@ app.use(express.bodyParser());    // Middleware for reading request body
 app.use(express.methodOverride()); // Middleware for receiving HTTP delete & put
 //app.use(Mailgun);
 
-// // reading the request query string of HTTP GET request.
-// app.get('/test', function(req, res) {
-//   // GET http://example.parseapp.com/test?message=hello
-//   res.send(req.query.message);
-// });
-// // reading the request body of HTTP POST request.
-//app.post('/test', function(req, res) {
-//    // POST http://example.parseapp.com/test (with request body "message=hello")
-//    res.send(req.body.message);
-// });
-
-//app.get('/hello', function(req, res) {
-//  res.render('hello', { title: "Hello Partner", username: req.body.username, password: req.body.password });
-//});
-//app.post('/hello', function(req, res) {
-//    /*
-//     * --> if in PostMan, select POST, Body section enter in
-//     *          { "username" : "someUsername" }
-//     * res.render is taking the 'value' from our JSON {key:value}
-//     */
-//    res.render('hello', {title: "Hello", username: req.body.username, password:req.body.password });
-//});
 
 app.get('/api/category/categoryName', function(req, res) {
     var Categories = Parse.Object.extend('Category');
@@ -91,10 +69,13 @@ app.get('/login', function(req, res) {
 app.post('/login', function(req, res) {
     var uname = req.body.username;
     var pword = req.body.password;
-
+    
+    console.log('entered login routine');
+    
     Parse.User.logIn(uname, pword).then(function(user) {
         var current = Parse.User.current();
         var sesh = current.getSessionToken();
+        //console.log(Parse.User.current().get("username"));
         var seshToString = sesh.toString();
         var roleACL = new Parse.ACL();
         roleACL.setWriteAccess(current, true);
