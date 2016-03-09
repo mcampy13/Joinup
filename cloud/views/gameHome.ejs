@@ -8,7 +8,7 @@
 		<!--<meta name="description" content="">-->
 		<!--<meta name="author" content="">-->
 	
-		<title>Add Category</title>
+		<title>Game Home</title>
 	
 		<!-- Bootstrap core CSS -->
 		<link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -80,7 +80,7 @@
 				
 				<!-- Sidebar navbar is only visible on mobile views -->
 				<div class="collapse navbar-collapse"  id="bs-sidebar-navbar-collapse-2">
-					<ul class="nav navbar-nav hidden-sm hidden-md hidden-lg hidden-xl" id="sidebarSidebar">
+					<ul class="nav navbar-nav hidden-sm hidden-md hidden-lg hidden-xl" id="HiddenSidebarSidebar">
 						
 						<div class="mobileTop">
 							<li><a id="profileName" href="/profile"><span id="icon" class="fa fa-user"></span>    </a></li>
@@ -102,10 +102,16 @@
 				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 					
 					<h1 class="page-header">Game Home</h1>
-					
+					<h3 id="challengeHeader" class="challenge-header hidden">Choose Your Opponent...</h3>
                     <div class=button-container>
-                        <a id = "newGameBtn" class="btn btn-lg btn-primary btn-block" type="/">Play New Solo Game</a>
-                        <a id="challengeBtn" class="btn btn-lg btn-primary btn-block" href="/badges">Challenge Other Players</a>
+                        <a id = "soloGameBtn" name = "soloGame" class="btn btn-lg btn-primary btn-block" >Play New Solo Game</a>
+                        <a id="challengeGameBtn" name = "challengeGame" class="btn btn-lg btn-primary btn-block" >Challenge Other Players</a>
+						<br>
+						<a id = "gamesInProgressBtn" name = "gamesInProgress" class="btn btn-lg btn-primary btn-block">Games In Progress</a>
+						
+						<!-- Buttons are hidden until challenge Game is pressed -->
+						<a id = "friendChallengeBtn" name = "friendChallenge" class="btn btn-lg btn-primary btn-block hidden" href="/playScreen" style="margin-top:25px;" >Friends</a>
+						<a id = "randomChallengeBtn" name = "randomChallenge" class="btn btn-lg btn-primary btn-block hidden" href="/playScreen" >Random Player</a>
                     </div>
 					
 				</div> <!-- .main -->
@@ -118,15 +124,9 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="javascript/globalScripts.js"></script>
+		<script src="javascript/gameHome.js"></script>
 		<!-- Bootstrap JS (MUST come AFTER jQuery line above) -->
 		<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
-		
-		<script>
-			/*$('#dropDown').click(function(){
-				var Value=$('#topNav').height();
-				document.getElementById('bs-sidebar-navbar-collapse-2').setAttribute("style","margin-top:" + Value.toString() + "px");
-			})*/
-		</script>
-	
+
 	</body>
 </html>

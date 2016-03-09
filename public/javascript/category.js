@@ -10,8 +10,8 @@ $(document).ready(function(){
 
     var profileButton = document.getElementById("profileName");
     profileButton.innerHTML += " ";
-    //profileButton.innerHTML += "Username";
-    profileButton.innerHTML += Parse.User.current().get("username");
+    profileButton.innerHTML += "Username";
+    //profileButton.innerHTML += Parse.User.current().get("username");
 
     queryCategories();
 

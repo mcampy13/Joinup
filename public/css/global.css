@@ -3,7 +3,7 @@
  */
 
 
-/* Move down content because we have a fixed navbar that is 50px tall */
+/* setting global body characteristics */
 body {
    /* padding-top: 50px;*/
     background-color: #f7f7f7;
@@ -11,11 +11,15 @@ body {
     height:100%;
 }
 
+/* styling for mobile navigation top user items bar*/
 .mobileTop{
     text-align:center;
+    background-color: #262626;
+    padding-top:8px;
+    margin-top:-6px;
 }
 
-
+/*styling for mobile navigation top user items bar items*/
 .mobileTop>li{
     display: inline;
     list-style-type: none;
@@ -25,6 +29,9 @@ body {
     margin-bottom:5px;
 }
 
+.mobileTop>li>a{
+    color:#f7f7f7 !important;
+}
 
 /*
  * Global add-ons
@@ -38,9 +45,10 @@ body {
 
 
  body,html{
+        font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif !important;
 		height: 100%;
         font-weight: 500;
-        font-size:16px;
+        width:100vw;
 }
 
 /* remove outer padding */
@@ -51,9 +59,10 @@ body {
 
 .main{
     margin-top:20px;
+    font-size:18px;
 }
 
-/*Remove rounded coners, creates space between top bar and sidebar*/
+/*adds rounded coners, creates space between top bar and sidebar*/
 
 nav.sidebar.navbar {
     border-radius: 2px;
@@ -63,11 +72,12 @@ nav.sidebar.navbar {
 
 
 nav.sidebar, .main{
-    -webkit-transition: margin-right 200ms ease-out;
-    -moz-transition: margin-right 200ms ease-out;
-    -o-transition: margin-right 200ms ease-out;
-    transition: margin-right 200ms ease-out;
+    -webkit-transition: margin-right .4s ease-out;
+    -moz-transition: margin-right .4s ease-out;
+    -o-transition: margin-right .4s ease-out;
+    transition: margin-right .4s ease-out;
     position:fixed;
+    font-size:18px;
 }
 
 /* Add gap to nav and right windows.*/
@@ -77,7 +87,7 @@ nav.sidebar, .main{
 
 /* .....NavBar: Icon only with coloring/layout.....*/
 
-/*small/medium side display*/
+/*small/medium size display*/
 @media (min-width: 768px) {
 
     /*Allow main to be next to Nav*/
@@ -174,11 +184,11 @@ nav.sidebar, .main{
 
 /* .....NavBar: Fully showing nav bar..... */
 
-@media (min-width: 1430px) {
+@media (min-width: 1630px) {
 
     /*Allow main to be next to Nav*/
     .main{
-        width: calc(100% - 200px); /*keeps 100% minus nav size*/
+        width: calc(100% - 150px); /*keeps 100% minus nav size*/
         margin-left: 200px;
     }
 
@@ -204,14 +214,49 @@ nav:hover .forAnimate{
 section{
     padding-left: 15px;
 }
-  
+
+
+/*Styling for Sidebar navigation */  
 #sidebarSidebar{
+    position:relative !important;
     -webkit-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
     -o-box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
     box-shadow: 7px 6px 5px -4px rgba(0,0,0,0.75);
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
-    
+
+/* styling for the container that holds the mobile dropdown navbar*/
+#bs-sidebar-navbar-collapse-2{
+    background-color:#262626;
+    border-color:#262626;
+}
+
+/*Styling for mobile navigation dropdown menu*/
+#HiddenSidebarSidebar{
+     position: relative;
+     border-color:#262626;
+     z-index: 999;
+     font-size:18px;
+     background-color: #f4813f;
+     -webkit-transition: all .4s ease-in-out;
+     -moz-transition: all .4s ease-in-out;
+     -o-transition: all .4s ease-in-out;
+     transition: all .4s ease-in-out;
+}
+
+/*styling for mobile navigation dropdown menu items*/
+#HiddenSidebarSidebar>li>a{
+    width:100%;
+    color:#f7f7f7;
+    border-color:#262626;
+     background-color:#262626;
+}
+
+/* Styling for navbar (company) name*/  
 .navbar-brand{
     color:#f4801f !important;
     font-size: 22px !important;
@@ -295,12 +340,13 @@ section{
 }
 .main .page-header {
     margin-top: 25px;
+    font-weight: 600;
 }
 
 .main h1{
     text-align: center;
     color: #f4801f;
-    font-size: 50px;
+    font-size: 55px;
 }
 
 .main #categoryNameInput:focus {

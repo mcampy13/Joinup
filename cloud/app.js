@@ -118,11 +118,6 @@ app.get('/users', function(req, res) {
 });
 
 
-//Routes for game homepage
-app.get('/gameHome', function(req, res) {
-    res.render('gameHome', {});
-});
-
 
 // Routes for badges, where admin can edit contents
 app.get('/badges', function(req, res) {
@@ -184,6 +179,17 @@ app.post('/logout', function(req, res) {
     res.redirect('/');
 });
 
+
+//Routes for game homepage
+app.get('/gameHome', function(req, res) {
+    res.render('gameHome', {});
+});
+
+
+//Routes for game play screen
+app.get('/playScreen', function(req, res){
+    res.render('playScreen', {});
+});
 
 // Attach the Express app to Cloud Code.
 app.listen();
