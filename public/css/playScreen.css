@@ -1,0 +1,131 @@
+/*container for the answer button 'a' elememts*/
+.answer-buttons{
+   position: absolute;
+    bottom: 25px;
+    width:85%;
+    text-align: center;
+    left:50%;
+    transform: translate(-50%);
+}
+/* styling for actual answer buttons*/
+.answer-buttons>a{
+    height:35px;
+    background-color:#f48017;
+    text-align: center;
+    border-color: #f48017;
+    color:#f7f7f7;
+    /*border-radius: 0px;*/
+    overflow:hidden;
+    margin:0px;
+    padding-top:2px;
+}
+
+.answer-buttons>a:hover{
+    -webkit-box-shadow: 6px 4px 5px 0px rgba(247,247,247,0.23);
+    -moz-box-shadow: 6px 4px 5px 0px rgba(247,247,247,0.23);
+    -o-box-shadow: 6px 4px 5px 0px rgba(247,247,247,0.23);
+    box-shadow: 6px 4px 5px 0px rgba(247,247,247,0.23);
+}
+
+.challenge-header{
+    text-align: center;
+    color:#262626;
+}
+
+.logo-div{
+   width:100vw;
+}
+
+@media(max-width:768px){
+    .button-container{
+        margin-left:auto;
+    }
+    
+    .logo-div{
+      margin-left:auto;
+    }
+    
+    #logo{
+        padding:0px;
+    }
+    
+    .main{
+        padding-top:25px;
+        width:100vw;
+        left:50%;
+        transform: translate(-50%);
+    }
+    
+}
+
+/*Location where question text is displayed*/
+.question-display{
+    height:50%;
+    background-color:#f7f7f7;
+    min-width:85%;
+    max-width: 653px;
+    text-align: center;
+    left:50%;
+    transform: translate(-50%);
+    
+}
+/* Displays Category name*/
+.question-header{
+    color:#f4801f;
+    text-align: center;
+    font-weight: 600;
+}
+
+/*Styles question view to be optimized for mobile displays*/
+@media(max-width:400px){
+    
+    
+    
+    .challenge-header{
+        display:none;
+    }
+    
+    .question-header{
+        margin-top:30px;
+    }
+    
+    .question-view{
+        background-color:#f7f7f7 !important;
+        margin-top:0px;
+        overflow-x: hidden;
+    }
+    
+    .question-display{
+        width:90vw !important;
+        height:40%;
+        font-size:20px;
+        margin-top:-30px;
+    }
+    
+    .answer-buttons>a{
+        width: 110%;
+        height:40px;
+        padding-top:10px;
+        margin-bottom:5px;
+        transform: translateX(-13px);
+    }
+    
+    .answer-buttons{
+        bottom:90px;
+        margin-bottom:5px;
+    }
+}
+
+/*Styles text within the question-display*/
+.question-text{
+    vertical-align: middle;
+}
+
+/*Container for question-display and buttons */
+.question-view{
+    height:420px;
+    margin-top:25px;
+    padding-top:25px;
+    background-color:#2f2f2f;
+    position: relative;
+}

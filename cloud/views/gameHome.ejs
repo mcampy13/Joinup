@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<!--<meta name="description" content="">-->
+		<!--<meta name="author" content="">-->
+	
+		<title>Game Home</title>
+	
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+		<!--Font Awesome-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Custom styles for this template -->
+		<link href="css/gameHome.css" rel="stylesheet">
+		<link href="css/global.css" rel="stylesheet">
+	</head>
+	
+	<body>
+	  
+		<!-- Main sidebar for web views -->  
+		<nav class="navbar navbar-inverse sidebar hidden-xs" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				
+				
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse " id="bs-sidebar-navbar-collapse-1">
+					<ul class="nav navbar-nav" id="sidebarSidebar">
+						<li><a href="/dashboard"><span id="icon" class="pull-right fa fa-tachometer"></span>    Dashboard<span class="sr-only">(current)</span></a></li>
+						<li><a href="/gameHome"><span id="icon" class="pull-right fa fa-gamepad"></span>    Game Home</a></li>
+						<li><a href="/users"><span id="icon" class="pull-right fa fa-users"></span>    Users</a></li>
+						<li><a href="/badges"><span id="icon" class="pull-right fa fa-trophy"></span>    Badges</a></li>
+						<li class="active"><a href="/addCategory"><span id="icon" class="pull-right fa fa-pencil"></span>    Categories</a></li>
+						<li><a href="/addSubCategory"><span id="icon" class="pull-right fa fa-pencil"></span>    Sub-Categories</a></li>
+						<li><a href="/addQuestion"><span id="icon" class="pull-right fa fa-pencil"></span>    Questions</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<!--Top of page navigation bar-->
+		<nav id="topNav" class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/dashboard">Connect Hub </a>
+					
+					<button id="dropDown" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-2" aria-expanded="false" aria-controls="bs-sidebar-navbar-collapse-2">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+				</div>
+				
+				
+				<div id="navbar" class="navbar-collapse collapse">
+					
+					 <ul class="nav navbar-nav navbar-right" id="topBar">
+						<li><a id="profileName" href="/profile"><span id="icon" class="fa fa-user"></span>    </a></li>
+						<li><a href="/settings"><span id="icon" class="fa fa-cogs"></span>    </a></li>
+						<li><a href="/logout"><span id="icon" class="fa fa-sign-out"></span>  Logout</a></li>
+					</ul>
+					<form class="navbar-form navbar-right">
+						<a><span id="searchIcon" class="fa fa-search"></span></a>
+						<input type="text" class="form-control" placeholder="Search...">
+					</form>
+				</div>
+				
+			</div>
+		</nav>
+	
+	
+		<div class="container-fluid">
+			<div class="row">
+				
+				<!-- Sidebar navbar is only visible on mobile views -->
+				<div class="collapse navbar-collapse"  id="bs-sidebar-navbar-collapse-2">
+					<ul class="nav navbar-nav hidden-sm hidden-md hidden-lg hidden-xl" id="HiddenSidebarSidebar">
+						
+						<div class="mobileTop">
+							<li><a id="profileName" href="/profile"><span id="icon" class="fa fa-user"></span>    </a></li>
+							<li><a href="/settings"><span id="icon" class="fa fa-cogs"></span>    </a></li>
+							<li><a href="/logout"><span id="icon" class="fa fa-sign-out"></span>  Logout</a></li>
+						</div>
+						
+						<li><a href="/dashboard"><span id="icon" class="pull-right fa fa-tachometer"></span>    Dashboard<span class="sr-only">(current)</span></a></li>
+						<li><a href="/gameHome"><span id="icon" class="pull-right fa fa-gamepad"></span>    Game Home</a></li>
+						<li><a href="/users"><span id="icon" class="pull-right fa fa-users"></span>    Users</a></li>
+						<li><a href="/badges"><span id="icon" class="pull-right fa fa-trophy"></span>    Badges</a></li>
+						<li class="active"><a href="/addCategory"><span id="icon" class="pull-right fa fa-pencil"></span>    Categories</a></li>
+						<li><a href="/addSubCategory"><span id="icon" class="pull-right fa fa-pencil"></span>    Sub-Categories</a></li>
+						<li><a href="/addQuestion"><span id="icon" class="pull-right fa fa-pencil"></span>    Questions</a></li>
+					</ul>
+				</div>
+				
+	
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					
+					<h1 class="page-header">Game Home</h1>
+					<h3 id="challengeHeader" class="challenge-header hidden">Choose Your Opponent...</h3>
+                    <div class=button-container>
+                        <a id = "soloGameBtn" name = "soloGame" class="btn btn-lg btn-primary btn-block" >Play New Solo Game</a>
+                        <a id="challengeGameBtn" name = "challengeGame" class="btn btn-lg btn-primary btn-block" >Challenge Other Players</a>
+						<br>
+						<a id = "gamesInProgressBtn" name = "gamesInProgress" class="btn btn-lg btn-primary btn-block">Games In Progress</a>
+						
+						<!-- Buttons are hidden until challenge Game is pressed -->
+						<a id = "friendChallengeBtn" name = "friendChallenge" class="btn btn-lg btn-primary btn-block hidden" href="/playScreen" style="margin-top:25px;" >Friends</a>
+						<a id = "randomChallengeBtn" name = "randomChallenge" class="btn btn-lg btn-primary btn-block hidden" href="/playScreen" >Random Player</a>
+                    </div>
+					
+				</div> <!-- .main -->
+			</div> <!-- .row -->
+		</div> <!-- .container-fluid -->
+	
+	
+		<script type="text/javascript" src="javascript/ejs_production.js"></script>
+		<script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="javascript/globalScripts.js"></script>
+		<script src="javascript/gameHome.js"></script>
+		<!-- Bootstrap JS (MUST come AFTER jQuery line above) -->
+		<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
