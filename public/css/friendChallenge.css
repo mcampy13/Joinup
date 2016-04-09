@@ -1,0 +1,49 @@
+/*
+ *Styling for challange screen friend selection*/
+
+
+html{
+    height:100vh;
+}
+
+/*Location where player's friend list is displayed*/
+.friends-list{
+    height:60vh;
+    background-color:#f7f7f7;
+    width:70%;
+    left:50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+    padding-top:6px;
+    padding-bottom:6px;
+    overflow-y: scroll;
+}
+
+/*styling for friend item inside .friends-list*/
+.friend-box{
+    width:100%;
+    height:3em;
+    background-color:#f4801f;
+    text-align: center;
+    vertical-align: middle !important;
+    display: table-row;
+    margin-top:3px;
+    margin-bottom:3px;
+    border-radius: 7px;
+    color: #f7f7f7;
+}
+
+.friend-box:hover{
+    color: #262626 !important;
+}
+
+.friend-box-link:hover{
+    cursor: pointer;
+}
+
+.header{
+    color:#f4801f;
+    text-align: center;
+    font-weight: 600;
+    margin-top:10vh;
+}

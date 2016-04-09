@@ -1,5 +1,8 @@
 /*
- * Base structure
+ * Author: Matt Campagnola
+ * Started: 2/1/16
+ *
+ * Comments: Styling for common elements throughout the site
  */
 
 
@@ -182,7 +185,9 @@ nav.sidebar, .main{
     }
 }
 
-/* .....NavBar: Fully showing nav bar..... */
+/* .....NavBar: Fully showing nav bar.....
+*   For Large Screens Only
+**/
 
 @media (min-width: 1630px) {
 
@@ -253,7 +258,7 @@ section{
     width:100%;
     color:#f7f7f7;
     border-color:#262626;
-     background-color:#262626;
+     background-color:#262626 !important;
 }
 
 /* Styling for navbar (company) name*/  

@@ -8,14 +8,14 @@
 		<!--<meta name="description" content="">-->
 		<!--<meta name="author" content="">-->
 	
-		<title>Game Home</title>
+		<title>Pick A friend To Challenge</title>
 	
 		<!-- Bootstrap core CSS -->
 		<link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 		<!--Font Awesome-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<!-- Custom styles for this template -->
-		<link href="css/gameHome.css" rel="stylesheet">
+		<link href="css/friendChallenge.css" rel="stylesheet">
 		<link href="css/global.css" rel="stylesheet">
 	</head>
 	
@@ -80,7 +80,7 @@
 				
 				<!-- Sidebar navbar is only visible on mobile views -->
 				<div class="collapse navbar-collapse"  id="bs-sidebar-navbar-collapse-2">
-					<ul class="nav navbar-nav hidden-sm hidden-md hidden-lg hidden-xl" id="HiddenSidebarSidebar">
+					<ul class="nav navbar hidden-sm hidden-md hidden-lg hidden-xl" id="HiddenSidebarSidebar">
 						
 						<div class="mobileTop">
 							<li><a id="profileName" href="/profile"><span id="icon" class="fa fa-user"></span>    </a></li>
@@ -100,18 +100,27 @@
 				
 	
 				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-					
-					<h1 class="page-header">Game Home</h1>
-					<h3 id="challengeHeader" class="challenge-header hidden">Choose Your Opponent...</h3>
-                    <div class=button-container>
-                        <a id = "soloGameBtn" name = "soloGame" class="btn btn-lg btn-primary btn-block" >Play New Solo Game</a>
-                        <a id="challengeGameBtn" name = "challengeGame" class="btn btn-lg btn-primary btn-block" >Challenge Other Players</a>
-						<br>
-						<a id = "gamesInProgressBtn" name = "gamesInProgress" class="btn btn-lg btn-primary btn-block">Games In Progress</a>
-						
-						<!-- Buttons are hidden until challenge Game is pressed -->
-						<a id = "friendChallengeBtn" name = "friendChallenge" class="btn btn-lg btn-primary btn-block hidden" href="/friendChallenge" style="margin-top:25px;" >Friends</a>
-						<a id = "randomChallengeBtn" name = "randomChallenge" class="btn btn-lg btn-primary btn-block hidden" href="/playScreen" >Random Player</a>
+					<div class="question-header-container">
+                        <h2 class="header">Choose A Friend To Challenge</h2>
+                    </div>
+                    <div class="col-sm-7 col-sm-offset-3 col-md-8 col-md-offset-2 ">
+                        <div class= "col-sm-6  col-md-6  friends-list">
+                            <a class="friend-box-link"><span class="col-sm-6  col-md-6 friend-box"> <img src="img/ConnectHub_Logo_Icon.png" class="friend-pic"> Friend Name 1</span></a>
+                            <a class="friend-box-link"><span class="col-sm-6  col-md-6 friend-box"> Friend Name 2</span></a>
+							<a class="friend-box-link"><span class="col-sm-6  col-md-6 friend-box"> Friend Name 3</span></a>
+							<a class="friend-box-link"><span class="col-sm-6  col-md-6 friend-box"> Friend Name 4</span></a>
+							<a class="friend-box-link"><span class="col-sm-6  col-md-6 friend-box"> Friend Name 5</span></a>
+							<a class="friend-box-link"><span class="col-sm-6  col-md-6 friend-box"> Friend Name 6</span></a>
+							<a class="friend-box-link"><span class="col-sm-6  col-md-6 friend-box"> Friend Name 7</span></a>
+							<a class="friend-box-link"><span class="col-sm-6  col-md-6 friend-box"> Friend Name 8</span></a>
+							<a class="friend-box-link"><span class="col-sm-6  col-md-6 friend-box"> Friend Name 9</span></a>
+							<a class="friend-box-link"><span class="col-sm-6  col-md-6 friend-box"> Friend Name 10</span></a>
+							<a class="friend-box-link"><span class="col-sm-6  col-md-6 friend-box"> Friend Name 11</span></a>
+							<a class="friend-box-link"><span class="col-sm-6  col-md-6 friend-box"> Friend Name 12</span></a>
+
+                        </div>
+                        
+                        
                     </div>
 					
 				</div> <!-- .main -->

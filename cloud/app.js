@@ -191,5 +191,12 @@ app.get('/playScreen', function(req, res){
     res.render('playScreen', {});
 });
 
+
+//Routes for friendChallenge screen
+app.get('/friendChallenge', function(req, res){
+    res.render('friendChallenge', {});
+});
+
+
 // Attach the Express app to Cloud Code.
 app.listen();
